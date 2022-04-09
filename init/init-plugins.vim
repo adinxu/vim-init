@@ -16,7 +16,6 @@
 if !exists('g:bundle_group')
 	let g:bundle_group = ['basic', 'tags', 'enhanced', 'filetypes', 'textobj']
 	let g:bundle_group += ['tags', 'airline', 'nerdtree', 'ale', 'echodoc']
-	let g:bundle_group += ['leaderf']
 endif
 
 
@@ -55,6 +54,19 @@ Plug 'chrisbra/vim-diff-enhanced'
 
 "同步markdown预览插件
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+"虚拟环境下，暴露8080端口供使用
+let g:mkdp_open_to_the_world = 1
+let g:mkdp_open_ip = '127.0.0.1'
+let g:mkdp_port = 8080
+function! g:Open_browser(url)
+    silent exe '!lemonade open 'a:url
+endfunction
+function! g:EchoUrl(url)
+    :echo a:url
+endfunction
+"自动开启浏览器目前有问题，先不使用
+"let g:mkdp_browserfunc = 'g:Open_browser'
+let g:mkdp_browserfunc = 'g:EchoUrl'
 
 "----------------------------------------------------------------------
 " Dirvish 设置：自动排序并隐藏文件，同时定位到相关文件
