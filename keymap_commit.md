@@ -15,6 +15,18 @@
 <A-…> 同 <M-…> 解释：ideavim用的这个方式  
 <leader> 默认是`\`键
 ```
+# 插件管理
+使用vim-plug做插件管理，常用命令如下：
+Command	 |Description
+-|-
+PlugInstall [name ...] [#threads]	|Install plugins
+PlugUpdate [name ...] [#threads]	|Install or update plugins
+PlugClean[!]	|Remove unlisted plugins (bang version will clean without prompt)
+PlugUpgrade	|Upgrade vim-plug itself
+PlugStatus	|Check the status of plugins
+PlugDiff	|Examine changes from the previous update and the pending changes
+PlugSnapshot[!] |[output path]	Generate script for restoring the current snapshot of the plugins
+
 # 插件快捷键
 ## easymotion/vim-easymotion
 可视化快速跳转
