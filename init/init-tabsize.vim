@@ -20,8 +20,7 @@ set sw=4
 set ts=4
 
 " 禁止展开 tab (noexpandtab)
-" set noet
-set expandtab
+set noet
 
 " 如果后面设置了 expandtab 那么展开 tab 为多少字符
 set softtabstop=4
